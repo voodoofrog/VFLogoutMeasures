@@ -1,0 +1,8 @@
+author: voodoofrog
+database: false
+description: An anti-cheat bukkit plugin to control when and where players log out.
+generator: http://dinnerbone.com/minecraft/tools/pluginator/
+main: uk.co.forgottendream.vflogoutmeasures.VFLogoutMeasures
+name: VFLogoutMeasures
+startup: postworld
+version: '1.0'
