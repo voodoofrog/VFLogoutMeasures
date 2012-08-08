@@ -51,6 +51,14 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <tagBase>https://svn.apache.org/repos/asf/maven/components/releases</tagBase>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <dependencies>
@@ -75,4 +83,9 @@
         	<version>1.0</version>
         </dependency>
     </dependencies>
+    <scm>
+    	<url>scm:git:git@github.com:voodoofrog/VFLogoutMeasures.git</url>
+    	<connection>scm:git:git@github.com:voodoofrog/VFLogoutMeasures.git</connection>
+    	<developerConnection>scm:git:git@github.com:voodoofrog/VFLogoutMeasures.git</developerConnection>
+    </scm>
 </project>
