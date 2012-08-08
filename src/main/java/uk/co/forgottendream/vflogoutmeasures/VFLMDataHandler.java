@@ -12,6 +12,9 @@ import org.bukkit.entity.Player;
 
 import sk.tomsik68.slapi.SLAPI;
 
+/**
+ * Handles all the data for the plugin
+ */
 public class VFLMDataHandler {
 
 	private final VFLogoutMeasures plugin;

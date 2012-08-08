@@ -10,6 +10,9 @@ import org.joda.time.format.ISODateTimeFormat;
 
 import uk.co.forgottendream.vflogger.VFLogger;
 
+/**
+ * Main plugin class
+ */
 public class VFLogoutMeasures extends JavaPlugin {
 
 	private static VFLogoutMeasures plugin;
@@ -51,20 +54,40 @@ public class VFLogoutMeasures extends JavaPlugin {
 		getLogger().info("VFLogoutMeasures plugin has been disabled.");
 	}
 	
+    /**
+     * Gets the {@link VFLMDataHandler} instance attached to the plugin instance
+     *
+     * @return VFLMDataHandler instance
+     */
 	public VFLMDataHandler getDataHandler()
 	{
 		return dataHandler;
 	}
 	
+    /**
+     * Gets the running instance of the plugin
+     *
+     * @return plugin instance
+     */
 	public static VFLogoutMeasures getPlugin()
 	{
 		return plugin;
 	}
 	
+    /**
+     * Gets the {@link VFLogger} instance attached to the plugin instance
+     *
+     * @return VFLogger instance
+     */
 	public VFLogger getVFLogger() {
 		return vflogger;
 	}
 	
+    /**
+     * Gets the current joda datetime
+     *
+     * @return currentDateTime object
+     */
 	public DateTime getCurrentDateTime() {
 		return currentDateTime;
 	}
