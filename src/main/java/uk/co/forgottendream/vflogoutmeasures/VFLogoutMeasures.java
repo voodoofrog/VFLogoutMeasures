@@ -20,6 +20,7 @@ public class VFLogoutMeasures extends JavaPlugin {
 	private VFLMEventsListener listeners;
 	private VFLogger vflogger;
 	private DateTime currentDateTime;
+	private DateTimeFormatter formattedDT;
 		
 	public void onEnable() {
 		//setup instances
@@ -28,6 +29,7 @@ public class VFLogoutMeasures extends JavaPlugin {
 		listeners = new VFLMEventsListener(this);
 		vflogger = new VFLogger(this.getName());
 		currentDateTime = new DateTime();
+		formattedDT = ISODateTimeFormat.dateTime();
 		//setup data path
 		//add a log filter for crashes
 		getLogger().setFilter(new VFLMLogCrashFilter(this));
@@ -47,6 +49,7 @@ public class VFLogoutMeasures extends JavaPlugin {
 		//save the plugin data to files
 		dataHandler.saveData();
 		//nullify instances
+		formattedDT = null;
 		currentDateTime = null;
 		vflogger = null;
 		dataHandler = null;
@@ -93,7 +96,6 @@ public class VFLogoutMeasures extends JavaPlugin {
 	}
 	
 	public DateTimeFormatter getDateTimeFormat() {
-		DateTimeFormatter formattedDT = ISODateTimeFormat.dateTime();
 		return formattedDT;
 	}
 
