@@ -1,8 +1,26 @@
-author: voodoofrog
-database: false
-description: An anti-cheat bukkit plugin to control when and where players log out.
-generator: http://dinnerbone.com/minecraft/tools/pluginator/
-main: uk.co.forgottendream.vflogoutmeasures.VFLogoutMeasures
 name: VFLogoutMeasures
-startup: postworld
-version: '1.0'
+main: uk.co.forgottendream.VFLogoutMeasures.VFLogoutMeasures
+version: 1.0
+
+commands:
+   emergencylogout:
+      description: Use this command if you must logout and do not have time to reach a bed.
+      usage: /<command>
+      permission: vflogoutmeasures.emergencylogout
+   toggletimesaving:
+      description: Toggles the saving of world times on last player logout.
+      usage: /<command>
+      permission: vflogoutmeasures.toggletimesaving
+
+permissions:
+    vflogoutmeasures.*:
+        description: Gives access to all vflogoutmeasures commands
+        children:
+            vflogoutmeasures.emergencylogout: true
+            vflogoutmeasures.toggletimesaving: false
+    vflogoutmeasures.emergencylogout:
+        description: Lets a player use emergencylogout
+        default: true
+    vflogoutmeasures.toggletimesaving:
+        description: Lets a player toggle the time saving
+        default: op

@@ -1,0 +1,2 @@
+# Sets whether the server should save and reset time based on player count
+SaveTimeOnEmpty: True
