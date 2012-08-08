@@ -87,14 +87,19 @@ public class VFLogoutMeasures extends JavaPlugin {
 	}
 	
     /**
-     * Gets the current joda datetime
+     * Gets the current joda datetime instance
      *
-     * @return currentDateTime object
+     * @return currentDateTime instance
      */
 	public DateTime getCurrentDateTime() {
 		return currentDateTime;
 	}
 	
+    /**
+     * Gets the joda datetime formatter instance
+     *
+     * @return DateTimeFormatter instance
+     */
 	public DateTimeFormatter getDateTimeFormat() {
 		return formattedDT;
 	}
