@@ -30,24 +30,21 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>1.7.1</version>
-                <configuration>
-                    <artifactSet>
-                        <excludes>
-                            <exclude>com.avaje:*</exclude>
-                            <exclude>com.google:*</exclude>
-                            <exclude>org.apache:*</exclude>
-                            <exclude>org.bukkit:*</exclude>
-                            <exclude>org.json:*</exclude>
-                            <exclude>org.yaml:*</exclude>
-                        </excludes>
-                    </artifactSet>
-                </configuration>
                 <executions>
                     <execution>
                         <phase>package</phase>
                         <goals>
                             <goal>shade</goal>
                         </goals>
+                        <configuration>
+                            <artifactSet>
+                                <includes>
+                                    <include>joda-time:*</include>
+                                    <include>uk.co.forgottendream.vflogger:*</include>
+                                    <include>sk.tomsik68.slapi:*</include>
+                                </includes>
+                            </artifactSet>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
