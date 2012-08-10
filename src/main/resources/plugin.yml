@@ -1,5 +1,5 @@
 name: VFLogoutMeasures
-main: uk.co.forgottendream.VFLogoutMeasures.VFLogoutMeasures
+main: uk.co.forgottendream.vflogoutmeasures.VFLogoutMeasures
 version: 1.0
 
 commands:
