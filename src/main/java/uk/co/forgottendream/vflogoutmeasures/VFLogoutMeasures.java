@@ -16,8 +16,8 @@ import uk.co.forgottendream.vflogger.VFLogger;
 public class VFLogoutMeasures extends JavaPlugin {
 
 	private static VFLogoutMeasures plugin;
-	private VFLMDataHandler dataHandler;
-	private VFLMEventsListener listeners;
+	private DataHandler dataHandler;
+	private EventsListener listeners;
 	private VFLogger vflogger;
 	private DateTime currentDateTime;
 	private DateTimeFormatter formattedDT;
@@ -25,14 +25,14 @@ public class VFLogoutMeasures extends JavaPlugin {
 	public void onEnable() {
 		//setup instances
 		plugin = this;
-		dataHandler = new VFLMDataHandler(this);
-		listeners = new VFLMEventsListener(this);
+		dataHandler = new DataHandler(this);
+		listeners = new EventsListener(this);
 		vflogger = new VFLogger(this.getName());
 		currentDateTime = new DateTime();
 		formattedDT = ISODateTimeFormat.dateTime();
 		//setup data path
 		//add a log filter for crashes
-		getLogger().setFilter(new VFLMLogCrashFilter(this));
+		getLogger().setFilter(new LogCrashFilter(this));
 		//read config and set defaults
 		getConfig().options().copyDefaults(true);
 		//set data from config
@@ -58,11 +58,11 @@ public class VFLogoutMeasures extends JavaPlugin {
 	}
 	
     /**
-     * Gets the {@link VFLMDataHandler} instance attached to the plugin instance
+     * Gets the {@link DataHandler} instance attached to the plugin instance
      *
      * @return VFLMDataHandler instance
      */
-	public VFLMDataHandler getDataHandler()
+	public DataHandler getDataHandler()
 	{
 		return dataHandler;
 	}

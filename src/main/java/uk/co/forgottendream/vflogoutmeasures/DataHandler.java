@@ -15,7 +15,7 @@ import sk.tomsik68.slapi.SLAPI;
 /**
  * Handles all the data for the plugin
  */
-public class VFLMDataHandler {
+public class DataHandler {
 
 	private final VFLogoutMeasures plugin;
 	private Set<String> SafeList = new HashSet<String>();
@@ -25,7 +25,7 @@ public class VFLMDataHandler {
 	private Map<String, Long> WorldTimes = new HashMap<String, Long>();
 	private String pluginDataFolder;
 	
-    public VFLMDataHandler(VFLogoutMeasures plugin) {
+    public DataHandler(VFLogoutMeasures plugin) {
     	this.plugin = plugin;
     	pluginDataFolder = plugin.getDataFolder().getAbsolutePath() + File.separator;
     }

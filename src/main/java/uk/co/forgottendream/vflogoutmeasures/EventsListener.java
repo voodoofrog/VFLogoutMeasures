@@ -23,12 +23,12 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.server.ServerCommandEvent;
 import org.bukkit.event.world.WorldSaveEvent;
 
-public class VFLMEventsListener implements Listener {
+public class EventsListener implements Listener {
 
 	private final VFLogoutMeasures plugin;
 	private Map<String, Integer> scheduledLogouts = new HashMap<String, Integer>();
 	
-	public VFLMEventsListener(VFLogoutMeasures plugin) {
+	public EventsListener(VFLogoutMeasures plugin) {
 		this.plugin = plugin;
 	}
 	

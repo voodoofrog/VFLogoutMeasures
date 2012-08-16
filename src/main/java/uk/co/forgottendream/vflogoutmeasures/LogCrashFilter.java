@@ -3,11 +3,11 @@ package uk.co.forgottendream.vflogoutmeasures;
 import java.util.logging.Filter;
 import java.util.logging.LogRecord;
 
-public class VFLMLogCrashFilter implements Filter {
+public class LogCrashFilter implements Filter {
 	
 	private final VFLogoutMeasures plugin;
 	
-	public VFLMLogCrashFilter(VFLogoutMeasures plugin) {
+	public LogCrashFilter(VFLogoutMeasures plugin) {
 		this.plugin = plugin;
 	}
 	
